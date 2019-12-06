@@ -1,0 +1,136 @@
+test_number,decon_solution_ml,equipment,contact_time_hour,temp_degc,material,inoculum_cfu_coupon,mean_recovered_b_anthracis_cfu_coupon,mean_recovered_b_anthracis_cfu_coupon_2,decontamination_efficacy_cid
+Test Number,"Decon Solution 
+(mL)",Equipment,"Contact Time 
+(hour)",Temp (°C),Material,Inoculum (CFU/coupon),Positive Controlb,Test Couponc,Decontamination Efficacy ± CId
+1,PAA (160),Sani-Tizer,18,20,Rubber Flooring,135000000,8.95 ± 2.14 x 107,0.00 ± 0.00,≥7.94 ± 0.10
+1,PAA (160),Sani-Tizer,18,20,Upholstery,135000000,1.20 ± 0.04 x 108,0.00 ± 0.00,≥8.08 ± 0.01
+1,PAA (160),Sani-Tizer,18,20,Aluminum,135000000,7.65 ± 0.85 x 107,0.00 ± 0.00,≥7.88 ± 0.04
+1,PAA (160),Sani-Tizer,18,20,Mylar,135000000,1.17 ± 0.31 x 108 ,0.00 ± 0.00,≥8.06 ± 0.10
+1,PAA (160),Sani-Tizer,18,20,Fiberglass Siding,135000000,3.90 ± 1.08 x 107,0.00 ± 0.00,≥7.58 ± 0.10
+1,PAA (160),Sani-Tizer,18,20,Carpet,135000000,4.60 ± 2.19 x 107,1.06 ± 1.71 x 106,2.37 ± 1.30
+3,PAA (160),Sani-Tizer,"168†
+24hr, 48hr, 120hr, 144hr, 168hr)",20,Carpet,117000000,2.49 ± 1.00 x 107,4.27 ± 2.77 x 105,1.84 ± 0.36
+3,PAA (160),Sani-Tizer,"168†
+24hr, 48hr, 120hr, 144hr, 168hr)",20,Carpet,117000000,2.49 ± 1.00 x 107,1.74 ± 3.08 x 106,1.66 ± 0.68
+3,PAA (160),Sani-Tizer,"168†
+24hr, 48hr, 120hr, 144hr, 168hr)",20,Carpet,117000000,2.49 ± 1.00 x 107,5.13 ± 6.71 x 105,2.84 ± 1.47
+4,PAA (78),Sani-Tizer,18,20,Rubber Flooring,172000000,1.18 ± 0.06 x 108,0.00 ± 0.00,≥8.07 ± 0.02
+4,PAA (78),Sani-Tizer,18,20,New Grease (SOT),172000000,1.06 ± 0.10 x 108,1.27 ± 2.85 x 106,5.93 ± 2.70
+4,PAA (78),Sani-Tizer,18,20,New HVAC Filter,172000000,9.83 ± 1.02 x 107,0.00 ± 0.00,≥7.99 ± 0.04
+4,PAA (78),Sani-Tizer,18,20,Mylar,172000000,8.39 ± 1.24 x 107,1.41 ± 2.94 x 10,7.56 ± 0.72
+4,PAA (78),Sani-Tizer,18,20,Fiberglass Siding,172000000,3.99 ± 0.86 x 107,3.80 ± 5.54 x 102,6.03 ± 1.30
+4,PAA (78),Sani-Tizer,18,20,Carpet,172000000,6.42 ± 3.09 x 107,4.85 ± 3.24 x 106,1.24 ± 0.58
+5,22% H2O2 (78),Sani-Tizer,18,20,Rubber Flooring,109000000,8.52 ± 1.05 x 107,0.00 ± 0.00,≥7.93 ± 0.05
+5,22% H2O2 (78),Sani-Tizer,18,20,New Grease (SOT),109000000,1.07 ± 0.09 x 108,3.98 ± 4.53 x 106,1.70 ± 0.50
+5,22% H2O2 (78),Sani-Tizer,18,20,New HVAC Filter,109000000,9.79 ± 1.20 x 107,9.04 ± 12.6 x 104,5.85 ± 2.57
+5,22% H2O2 (78),Sani-Tizer,18,20,Mylar,109000000,8.51 ± 1.09 x 107,0.00 ± 0.00 ,≥7.93 ± 0.05
+5,22% H2O2 (78),Sani-Tizer,18,20,Fiberglass Siding,109000000,4.10 ± 0.95 x 107,2.40 ± 3.96 x 104,3.58 ± 0.50
+5,22% H2O2 (78),Sani-Tizer,18,20,Carpet,109000000,4.17 ± 2.52 x 107,1.90 ± 1.80 x 107,0.39 ± 0.42
+6,PAA (78),Sani-Tizer,8,20,Rubber Flooring,109000000,7.13 ± 0.16 x 107,7.87 ± 4.33 x 106,7.33 ± 1.03
+2,8% H2O2 (2635),Sani-Tizer,168,20,Rubber Flooring,126000000,9.71 ± 1.40 x 107,0.00 ± 0.00,≥7.98 ± 0.05
+2,8% H2O2 (2635),Sani-Tizer,168,20,Upholstery,126000000,9.87 ± 1.70 x 107,0.00 ± 0.00,≥7.99 ± 0.06
+2,8% H2O2 (2635),Sani-Tizer,168,20,Aluminum,126000000,1.02 ± 0.12 x 108,0.00 ± 0.00,≥8.01 ± 0.04
+2,8% H2O2 (2635),Sani-Tizer,168,20,Mylar,126000000,8.61 ± 1.05 x 107,0.00 ± 0.00,≥7.93 ± 0.05
+2,8% H2O2 (2635),Sani-Tizer,168,20,Fiberglass Siding,126000000,4.05 ± 2.08 x 107,9.95 ± 22.2 x 102,6.77 ± 1.49
+2,8% H2O2 (2635),Sani-Tizer,168,20,Carpet,126000000,5.63 ± 2.60 x 107,1.95 ± 2.60 x 105,4.51 ± 2.59
+3,PAA (160),Sani-Tizer,"168†
+24hr, 48hr, 120hr, 144hr, 168hr)",20,Carpet,117000000,2.49 ± 1.00 x 107,9.90 ± 12.1 x 105,1.71 ± 0.67
+3,PAA (160),Sani-Tizer,"168†
+24hr, 48hr, 120hr, 144hr, 168hr)",20,Carpet,117000000,2.49 ± 1.00 x 107,1.53 ± 1.64 x 105,2.69 ± 0.94 
+6,PAA (78),Sani-Tizer,8,20,Encapsulated New Grease,109000000,7.87 ± 4.33 x 106,1.88 ± 1.45 x 106,0.85 ± 0.68
+6,PAA (78),Sani-Tizer,8,20,Used HVAC Filter,109000000,7.75 ± 0.70 x 107,0.00 ± 0.00,≥7.89 ± 0.04
+6,PAA (78),Sani-Tizer,8,20,Mylar,109000000,6.73 ± 0.45 x 107,0.00 ± 0.00,≥7.83 ± 0.03
+6,PAA (78),Sani-Tizer,8,20,Fiberglass Siding,109000000,2.98 ± 1.27 x 107,1.34 ± 2.20 x 104,4.93 ± 2.03
+6,PAA (78),Sani-Tizer,8,20,Unpainted Concrete,109000000,6.13 ± 4.81 x 106,1.72 ± 1.26 x 105,1.57 ± 0.49
+7,PAA (160),Sani-Tizer,18,20,Carpet,103000000,2.10 ± 1.81 x 107,3.53 ± 4.11 x 105,2.16 ± 0.85
+7,PAA (160),Sani-Tizer,18,20,Unpainted Concrete,103000000,2.81 ± 2.38 x 106,5.97 ± 4.82 x 104,1.66 ± 0.68
+7,PAA (160),Sani-Tizer,18,20,Used HVAC Filter,103000000,6.27 ± 0.58 x 107,0.00 ± 0.00,≥7.80 ± 0.04
+7,PAA (160),Sani-Tizer,18,20,New Grease (SOT),103000000,5.06 ± 5.77 x 106,1.31 ± 2.86 x 103,5.97 ± 1.19
+7,PAA (160),Sani-Tizer,18,20,Encapsulated New Grease,103000000,6.95 ± 6.34 x 106,2.16 ± 3.55 x 105,1.78 ± 1.14
+7,PAA (160),Sani-Tizer,18,20,Used Grease (SOT),103000000,5.35 ± 0.85 x 107,0.00 ± 0.00,≥7.72 ± 0.06
+8,PAA (160),Minncare,18,20,Carpet,104000000,2.08 ± 1.32 x 107,2.42 ± 4.36 x 105,2.44 ± 0.71
+8,PAA (160),Minncare,18,20,Unpainted Concrete,104000000,3.00 ± 2.96 x 106,2.00 ± 2.13 x 105,1.27 ± 0.72
+8,PAA (160),Minncare,18,20,Used HVAC Filter,104000000,7.17 ± 0.72 x 107,0.00 ± 0.00 ,≥7.85 ± 0.04
+8,PAA (160),Minncare,18,20,New Grease (SOT),104000000,8.60 ± 0.80 x 107,9.46 ± 21.2 x 103,7.00 ± 1.83
+8,PAA (160),Minncare,18,20,Encapsulated New Grease,104000000,4.32 ± 3.80 x 106,9.27 ± 13.1 x 105,1.00 ± 0.93
+8,PAA (160),Minncare,18,20,Used Grease (SOT),104000000,9.04 ± 1.47 x 107,3.95 ± 8.58 x 105,5.76 ± 2.67
+9,PAA (160),Minncare,18,20,Rubber Flooring,84000000,6.98 ± 0.59 x 107,0.00 ± 0.00,≥7.84 ± 0.03
+,,,,,Upholstery,,9.44 ± 0.69 x 107,0.00 ± 0.00,≥7.97 ± 0.03
+,,,,,Aluminum,,8.91 ± 1.18 x 107,0.00 ± 0.00,≥7.95 ± 0.05
+,,,,,Mylar,,7.97 ± 1.06 x 107,0.00 ± 0.00,≥7.90 ± 0.05
+,,,,,Fiberglass Siding,,3.74 ± 0.42 x 107,1.34 ± 1.90 x 102,5.97 ± 0.87
+,,,,,Carpet,,5.31 ± 2.37 x 107,4.39 ± 7.19 x 105,3.85 ± 2.17
+10,PAA (500),Minncare,18,20,Carpet,101000000,4.84 ± 1.94 x 107,2.82 ± 3.25 x 103,4.90 ± 1.39
+,,,,,Encapsulated New Grease,,1.78 ± 1.63 x 106,2.11 ± 4.27 x 105,2.40 ± 1.65
+,,,,,Used HVAC Filter,,8.39 ± 0.89 x 107,0.00 ± 0.00,≥7.92 ± 0.04
+,,,,,Fiberglass Siding,,3.25 ± 0.90 x 107,1.21 ± 2.68 x 102,6.94 ± 1.10
+,,,,,Unpainted Concrete,,2.04 ± 1.55 x 107,1.01 ± 1.07 x 105,2.41 ± 0.55 
+,,,,,Used Grease (SOT),,8.62 ± 0.63 x 107,1.33 ± 2.98 x 103,7.17 ± 1.50
+11,PAA (160),Sani-Tizer,18,10,Rubber Flooring,96700000,7.85 ± 0.57 x 107,0.00 ± 0.00 ,≥7.89 ± 0.03
+,,,,,Upholstery,,8.83 ± 1.22 x 107,2.54 ± 5.68 x 103,7.12 ± 1.61
+,,,,,Aluminum,,8.50 ± 0.84 x 107,1.07 ± 2.38 x 102,7.38 ± 1.07
+,,,,,Mylar,,6.13 ± 1.44 x 107,0.00 ± 0.00,≥7.78 ± 0.10
+,,,,,Fiberglass Siding,,4.40 ± 0.76 x 107,7.08 ± 15.4 x 102,6.56 ± 1.40
+,,,,,Carpet,,3.39 ± 1.64 x 107,6.43 ± 6.96 x 106,0.99 ± 0.61
+12,PAA (78),Sani-Tizer,18,10,Rubber Flooring,104000000,7.14 ± 0.65 x 107,1.07 ± 2.40 x 103,7.11 ± 1.46
+,,,,,New Grease (SOT),,1.07 ± 0.16 x 108,2.04 ± 2.95 x 106,3.40 ± 2.47
+,,,,,New HVAC Filter,,1.04 ± 0.09 x 108,3.06 ± 6.84 x 105,6.47 ± 2.35
+,,,,,Mylar,,8.41 ± 0.72 x 107,7.46 ± 14.4,7.62 ± 0.60
+,,,,,Fiberglass Siding,,3.39 ± 0.38 x 107,5.63 ± 7.14 x 104,3.39 ± 0.87
+,,,,,Carpet,,2.80 ± 2.33 x 107,9.70 ± 7.79 x 106,0.54 ± 0.58
+13,PAA (160),Sani-Tizer,18,10,Carpet,101000000,4.04 ± 1.73 x 107,7.90 ± 5.97 x 106,0.73 ± 0.32
+,,,,,Unpainted Concrete,,5.66 ± 3.12 x 106,4.85 ± 3.97 x 105 ,1.24 ± 0.58
+,,,,,Used HVAC Filter,,4.87 ± 0.71 x 107,0.00 ± 0.00,≥7.68 ± 0.06
+,,,,,New Grease (SOT),,7.30 ± 0.67 x 107,4.27 ± 7.72 x 105,3.81 ± 2.16
+,,,,,Encapsulated New Grease,,1.32 ± 1.41 x 106,3.96 ± 3.87 x 105,0.77 ± 1.26
+,,,,,Used Grease (SOT),,7.67 ± 0.24 x 107,2.32 ± 4.32 x 106,3.31 ± 2.41
+14,PAA (500),Minncare,18,10,Carpet,113000000,4.75 ± 2.57 x 107,1.89 ± 1.46 x 106,1.43 ± 0.41
+,,,,,Encapsulated New Grease,,1.38 ± 0.40 x 107,5.81 ± 7.65 x 105,1.65 ± 0.51
+,,,,,Used HVAC Filter,,8.11 ± 1.04 x 107,9.42 ± 20.8 x 10,7.37 ± 1.05
+,,,,,Fiberglass Siding,,3.08 ± 1.05 x 107 ,1.12 ± 2.23 x 104,5.38 ± 1.87
+,,,,,Unpainted Concrete,,1.23 ± 0.54 x 107,9.76 ± 2.70 x 104,2.06 ± 0.29
+,,,,,Used Grease (SOT),,6.65 ± 2.24 x 107,4.89 ± 10.1 x 105,3.87 ± 2.11
+15,PAA (500),Sani-Tizer,18,20,Carpet,100000000,2.09 ± 1.31 x 107,2.22 ± 4.96 x 104,6.26 ± 1.99
+,,,,,Encapsulated New Grease,,4.75 ± 0.83 x 106,3.41 ± 4.95 x 105,2.77 ± 2.19
+,,,,,Used HVAC Filter,,6.72 ± 2.14 x 107,0.00 ± 0.00,≥7.80 ± 0.15
+,,,,,Fiberglass Siding,,3.12 ± 2.08 x 107,1.27 ± 2.83 x 102,6.86 ± 1.13
+,,,,,Unpainted Concrete,,1.48 ± 1.15 x 107,7.27 ± 8.64 x 104,2.70 ± 0.86
+,,,,,Used Grease (SOT),,8.74 ± 1.20 x 107,1.16 ± 2.59 x 105,6.22 ± 2.25
+16,35% H2O2 (500),Minncare,18,20,Carpet,90300000,2.98 ± 1.76 x 107,3.62 ± 3.59 x 106,1.01 ± 0.49
+,,,,,Encapsulated New Grease,,5.05 ± 2.17 x 106,5.83 ± 4.84 x 105,1.15 ± 0.61
+,,,,,Used HVAC Filter,,6.98 ± 7.63 x 107,3.39 ± 4.66 x 10,7.08 ± 0.92
+,,,,,Fiberglass Siding,,3.54 ± 2.10 x 107,3.06 ± 5.59 x 103,5.30 ± 1.50
+,,,,,Unpainted Concrete,,7.10 ± 12.8 x 107,5.37 ± 4.89 x 105, 1.87 ± 0.72
+,,,,,Used Grease (SOT),,6.49 ± 3.63 x 107,1.02 ± 1.56 x 106,2.34 ± 1.43
+17,35% H2O2 (1000),Sani-Tizer,18,20,Carpet,103000000,2.92 ± 0.79 x 107,1.73 ± 0.79 x 105,2.29 ± 0.31
+,,,,,Encapsulated New Grease,,8.55 ± 0.60 x 107,4.24 ± 5.96 x 105,2.69 ± 0.59
+,,,,,Used HVAC Filter,,7.20 ± 0.39 x 107,1.16 ± 2.55 x 103,6.74 ± 1.47
+,,,,,Fiberglass Siding,,5.37 ± 4.39 x 107,4.74 ± 1.02 x 102,6.61 ± 1.35
+,,,,,Unpainted Concrete,,6.83 ± 1.47 x 106,3.02 ± 2.81 x 105,1.57 ± 0.49
+,,,,,Used Grease (SOT),,7.92 ± 0.46 x 107,8.14 ± 8.30 x 102,5.73 ± 1.23
+18,PAA (1000),Sani-Tizer,18,20,Carpet,66000000,5.28 ± 1.85 x 107,3.43 ± 5.65 x 105,3.31 ± 1.45
+,,,,,Encapsulated New Grease,,1.22 ± 6.53 x 106,1.46 ± 3.15 x 105,1.99 ± 0.97
+,,,,,New Grease (SOT),,8.27 ± 1.40 x 107,7.46 ± 1.44,7.61 ± 0.60
+,,,,,Fiberglass Siding,,4.18 ± 0.85 x 107,5.67 ± 12.6 x 105,5.56 ± 2.60
+,,,,,Unpainted Concrete,,1.38 ± 0.70 x 107,1.95 ± 1.79 x 105,1.91 ± 0.36
+,,,,,Used Grease (SOT),,8.39 ± 2.09 x 107,0.00 ± 0.00,≥7.91 ± 0.10
+19,PAA (1000),Sani-Tizer,18,10,Carpet (Subway),71700000,2.46 ± 2.56 x 107,±,±
+,,,,,Encapsulated New Grease,,4.18 ± 3.01 x 106,9.35 ± 6.76 x 105,0.67 ± 0.52
+,,,,,Carpet (New),,7.01 ± 0.50 x 107,1.30 ± 2.21 x 104,4.32 ± 0.74
+,,,,,Fiberglass Siding,,3.47 ± 0.35 x 107,1.16 ± 1.82 x 103,6.17 ± 1.65
+,,,,,Unpainted Concrete,,4.38 ± 4.77 x 106,±,±
+,,,,,Used Grease (SOT),,8.50 ± 0.55 x 107,±,±
+20,35% H2O2 (1000),Sani-Tizer,18,10,Carpet,,4.70 ± 3.75 x 107,±,±
+,,,,,Encapsulated New Grease,,3.86 ± 2.23 x 108,±,±
+,,,,,Used HVAC Filter,,7.58 ± 1.39 x 107,0.00 ± 0.00,≥7.87 ± 0.07
+,,,,,Fiberglass Siding,,3.47 ± 1.18 x 107,2.12 ± 3.80 x 103,5.56 ± 1.62
+,,,,,Unpainted Concrete,,4.90 ± 3.98 x 106,8.11 ± 3.07 x 105,0.70 ± 0.34
+,,,,,Used Grease (SOT),,7.62 ± 1.01 x 107,±,±
+21,,,,,,,±,±,±
+,,,,,,,±,±,±
+,,,,,,,±,±,±
+,,,,,,,±,±,±
+,,,,,,,±,±,±
+,,,,,,,±,±,±
+* denotes temp. & RH were not controlled,,,,,,,,,
+† denotes samples were pulled from each location every 24hr,,,,,,,,,
