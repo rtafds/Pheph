@@ -104,7 +104,7 @@ Documentation
 Communication
 ~~~~~~~~~~~~~
 
-- Mailing address: n.rtafds@gmial.com
+- Mailing address: n.rtafds@gmail.com
 
 Citation
 ~~~~~~~~
