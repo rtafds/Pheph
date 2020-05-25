@@ -1,19 +1,17 @@
 #!/bin/bash
+###### Requirements without Version Specifiers ######`
+numpy
+pandas
+sklearn
+deap
+matplotlib
+minepy
+pyHSICLasso
+# plotly
 
-# using library list
-
-pip install --upgrade pip
-
-pip install numpy 
-pip install pandas
-pip install sklearn
-pip install deap
-
-pip install matplotlib
-pip install plotly
-pip install minepy
-pip install pyHSICLasso
-
-# Pytorch install
-
+###### Requirements with Version Specifiers ######`
+#keras == x.y.z          # Version Matching. Must be version x.y.z
+#pytorch >= x.y.z            # Minimum version x.y.z
+#plotly != x.y             # Version Exclusion. Anything except version x.y
+# ~= 1.1        # Compatible release. Same as >= 1.1, == 1.*
 
