@@ -2,19 +2,19 @@ build/
 dist/
 pheph.egg-info/
 /example/
-correlation_coefficient.py
-setup.py
+#correlation_coefficient.py
+#setup.py
 __init__.py
-pheph.py
-categorical_preprocessing.py
-make_ml_model.py
-make_dl_model.py
-genetic_algorithm.py
+#pheph.py
+#categorical_preprocessing.py
+#make_ml_model.py
+#make_dl_model.py
+#genetic_algorithm.py
 library.sh
-visualization.py
-missing_data_completion.py
+#visualization.py
+#missing_data_completion.py
 \.DS_Store
-make_dl_model_keras.py
+#make_dl_model_keras.py
 
 
 
