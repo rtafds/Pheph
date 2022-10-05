@@ -27,7 +27,7 @@ setup(
     #long_description=long_description,
     packages=['pheph'],
     #install_requires=_requires_from_file('requirements.txt'),
-    install_requires=['numpy','pnadas','sklearn','deap','minepy','PyHSICLasso'],
+    install_requires=['numpy','pandas','sklearn','deap','minepy','PyHSICLasso'],
     license=license,
     test_suite = 'tests'
 )
