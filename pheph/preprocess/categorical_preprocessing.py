@@ -119,7 +119,7 @@ class CategoricalPreprocessing():
     
     def _reborn_dummies(self, dummies_data):
         """A function that returns the column name of the dummy variable df that is set to 1.
-         That is, restoration of dummies. For apply."""
+        That is, restoration of dummies. For apply."""
         dummies_data_index = list(dummies_data[dummies_data==1].index)
         if dummies_data_index==[]:
             return np.nan

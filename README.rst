@@ -45,11 +45,7 @@ User installation
 
 Clone and current directory Pheph, run the following script in the terminal::
 
-    python setup.py install
-
-or ::
-
-    pip install -e .
+    pip install .
 
 
 Changelog
