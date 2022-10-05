@@ -4,6 +4,7 @@ import pandas as pd
 from deap import base, creator, tools, algorithms
 from sklearn.preprocessing import StandardScaler
 from copy import copy
+from .make_domain import MakeDomain
 
 class GeneticAlgorithm(MakeDomain):
     

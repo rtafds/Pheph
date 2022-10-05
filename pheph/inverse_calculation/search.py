@@ -1,5 +1,6 @@
 import time
 from deap import base, creator
+from .make_domain import MakeDomain
 
 class Search(MakeDomain):
 
