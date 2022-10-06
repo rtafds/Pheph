@@ -12,7 +12,7 @@ except ImportError:
 
 
 CLASSIFIERS = """\
-Development Status :: 4 - Beta
+Development Status :: 0 - Beta
 Intended Audience :: Education
 Intended Audience :: Science/Research
 Intended Audience :: Developers
@@ -74,21 +74,16 @@ def do_setup():
           # pygments is a dependency for Sphinx code highlight
           extras_require={
               'test': ['nose>=1.3.0', 'parameterized', 'flake8'],
-              'doc': ['Sphinx>=0.5.1', 'pygments']
+              'develop': ['minepy','PyHSICLasso']
           },
           package_data={
               '': ['*.txt', '*.rst', '*.cu', '*.cuh', '*.c', '*.sh', '*.pkl',
-                   '*.h', '*.cpp', 'ChangeLog', 'c_code/*'],
-              'theano.misc': ['*.sh'],
-              'theano.d3viz': ['html/*', 'css/*', 'js/*']
+                   '*.h', '*.cpp', 'ChangeLog', 'c_code/*']
           },
-          entry_points={
-              'console_scripts': ['theano-cache = bin.theano_cache:main',
-                                  'theano-nose = bin.theano_nose:main']
-          },
+
           keywords=' '.join([
-              'theano', 'math', 'numerical', 'symbolic', 'blas',
-              'numpy', 'gpu', 'autodiff', 'differentiation'
+              'Ganetic Algorithm', 'Machine Learning', 'explanation variable optimization', 'inverse',
+              'numpy', 'pandas', 'deap', 'Materials Informatics'
           ]),
     )
 
