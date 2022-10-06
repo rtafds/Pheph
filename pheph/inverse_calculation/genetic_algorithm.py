@@ -503,8 +503,19 @@ class GeneticAlgorithm(MakeDomain):
         return pd.DataFrame(shape_list)
 
 
-    def raw_data_fitness_value(self, data, obj, weights='self', ga_function='self', is_standard_scale='self'):
+    def raw_data_fitness_value(self, data, obj='self', weights='self', ga_function='self', is_standard_scale='self'):
+        """Add fitness values for raw data, By this function, you can know raw data fitness values same as pop from GA. 
+        Args:
+            data (pandas.DataFrame): used raw data.
+            obj : (list of int) Specify the target variable column as a list of numbers (later column names are also supported).
+            weights (str, optional): using ga evaluate weights. Defaults to 'self'.
+            ga_function (str, optional): using ga_evalulate function. Defaults to 'self'.
+            is_standard_scale (str, optional): using when ga_evaluate standard scaler. Defaults to 'self'.
         
+        Returns:
+            (pandas.DataFrame)
+            add fitness values data
+        """
          # Only need weights for multi-purpose
         if weights=='self' and hasattr(self, 'weights'):
             weights = self.weights
@@ -520,7 +531,9 @@ class GeneticAlgorithm(MakeDomain):
             is_standard_scale = self.is_standard_scale
         elif is_standard_scale=='self' and not hasattr(self, 'is_standard_scale'):
             is_standard_scale = False
-
+            
+        if obj=='self' and hasattr(self, 'obj'):
+            obj = self.obj
 
         if ga_function==None:
             if all([abs(x) ==1.0 or x ==0.0 for x in weights]):
@@ -564,11 +577,11 @@ class GeneticAlgorithm(MakeDomain):
         data_type = pd.DataFrame([['raw'] for x in range(len_data_obj)],columns=['data_type'])
         fitness = pd.DataFrame(fitness, columns=['fitness_value'])
 
-        data_fitness = pd.concat([data, data_type, fitness], axis=1)
+        data_fitness = pd.concat([data.reset_index(drop=True), data_type, fitness], axis=1)
         
         return data_fitness
     
-    def ga_restore(self, pop_save, data, obj, dummies_list='self',categories_reborn='self',
+    def ga_restore(self, pop_save, data, obj='self', dummies_list='self',categories_reborn='self',
                         is_raw_data = True, is_sort=True, is_duplicate_drop=True, is_origin_shape=True):
         """Function to completely restore pop_save.
         pop_save : (list) Saved pop by inverse_fit
@@ -588,7 +601,9 @@ class GeneticAlgorithm(MakeDomain):
             categories_reborn = self.categories_reborn
         elif categories_reborn=='self' and not hasattr(self, 'categories_reborn'):
             categories_reborn = [None, None]
-
+            
+        if obj=='self' and hasattr(self, 'obj'):
+            obj = self.obj
 
         # later self.dummies and self.categories fixes.
         data_columns = data.columns

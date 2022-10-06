@@ -36,13 +36,13 @@ class MakeMLModel():
         2:  ['GaussianProcessRegressor',{'n_estimators':1}]
         3 : [['GaussianProcessRegressor'], ['GaussianProcessRegressor']]
         4 : [['GaussianProcessRegressor',{'n_estimators':1}], ['GaussianProcessRegressor', {}]]
-        5 : [[['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(Mid))], [['GaussianProcessRegressor',{'n_estimators7:1}] for x in range(len(Obj))]]
+        5 : [[['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(mid))], [['GaussianProcessRegressor',{'n_estimators7:1}] for x in range(len(obj))]]
         If there is no mid,
         1 : 'GaussianProcessRegressor'
         2 : ['GaussianProcessRegressor', {}]
         3 : [[], ['GaussianProcessRegressor']]
         4 : [[], ['GaussianProcessRegressor', {}]]
-        5 : [[], [['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(Obj))]]
+        5 : [[], [['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(obj))]]
         """
         if len_mid>=1:
             # If there is mid,
@@ -114,13 +114,13 @@ class MakeMLModel():
         2:  ['GaussianProcessRegressor',{'n_estimators':1}]
         3 : [['GaussianProcessRegressor'], ['GaussianProcessRegressor']]
         4 : [['GaussianProcessRegressor',{'n_estimators':1}], ['GaussianProcessRegressor', {}]]
-        5 : [[['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(Mid))], [['GaussianProcessRegressor',{'n_estimators7:1}] for x in range(len(Obj))]]
+        5 : [[['GaussianProcessRegressor',{'n_estimators':1}] for x in range(len(mid))], [['GaussianProcessRegressor',{'n_estimators7:1}] for x in range(len(Obj))]]
         1 is all the same algorithm
         2 are all the same parameters of the specified algorithm, and the parameters are specified with {}
         3 is [[exp → mid algorithm], [mid → obj algorithm]]
         4 includes parameter specification in addition to 3
         5 is all specified, [[[[algorithm to predict the first mid if exp → mid, {parameter}], [algorithm to predict the second mid of exp → mid , {Parameters}], ...,]
-                                                            [[Algorithm to predict the first of obj when mid → obj, {parameter}], [Algorithm to predict the second of obj when mid → obj, {parameter}], ...,] , ...,]
+        [[Algorithm to predict the first of obj when mid → obj, {parameter}], [Algorithm to predict the second of obj when mid → obj, {parameter}], ...,] , ...,]
         If there is no mid,
         1 : 'GaussianProcessRegressor'
         2 : ['GaussianProcessRegressor', {}]

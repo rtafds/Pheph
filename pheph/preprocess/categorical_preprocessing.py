@@ -10,7 +10,7 @@ class CategoricalPreprocessing():
     def formatting(self, data, dummies=[], categories=[], category_order=[]):
         """
         data (numpy or DataFrame): Input data.
-        categories (list or None): Enter the column name or column number for categorical variable of nominal scale. Example : categories = ['carrier','substrate']
+        categories (list[str or int] or None): Enter the column name or column number for categorical variable of nominal scale. Example : categories = ['carrier','substrate']
         category_order (dict or None): Enter the column name or column number for the categorical variable of the order scale.
         When specifying, {"column name": {"label": order}}。Example : category_order={'Sex':{'Male':0,'Female':1}}
         Make sure categories and category_order are not on the same column.
