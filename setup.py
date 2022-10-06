@@ -70,7 +70,7 @@ def do_setup():
           license=LICENSE,
           platforms=PLATFORMS,
           packages=find_packages(),
-          install_requires=['numpy>=1.9.1', 'scipy>=0.14', 'six>=1.9.0'],
+          install_requires=['numpy','pandas','sklearn','deap'],
           # pygments is a dependency for Sphinx code highlight
           extras_require={
               'test': ['nose>=1.3.0', 'parameterized', 'flake8'],
