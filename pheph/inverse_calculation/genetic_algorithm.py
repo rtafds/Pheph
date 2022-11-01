@@ -168,7 +168,7 @@ class GeneticAlgorithm(MakeDomain):
         domain : (dictionary) The values that exp can take in GA are set in a dictionary. The default is uniform for the minimum and maximum values of exp.
         For the detailed explanation
         evaluate_function : (function) A function that calculates the optimization. Takes as many arguments as there are objective variables and has one return value.
-        If 'defalut', using weights that all weights are equal.
+        If 'default', using weights that all weights are equal.
         weight : (tuple) Optimization function weights.Takes as many arguments as there are objective variables. If default, equal weight maximization (1.0,1.0, ...) is imposed.
         exp : (list) Specify the experimental condition column as a list of numbers (later column names are also supported).
         obj : (list) Specify the target variable column as a list of numbers (later column names are also supported).
@@ -217,7 +217,7 @@ class GeneticAlgorithm(MakeDomain):
         domain_ = list(domain.values())
         domain_list = []
         domain_list_append = domain_list.append
-        for i, dom in enumerate(domain_):    
+        for i, dom in enumerate(domain_):  
             if domain_[i][0]=='choice2':
                 if isinstance(domain_[i][1], tuple) or isinstance(domain_[i][1],list):
                     domain_list_append(dom)
