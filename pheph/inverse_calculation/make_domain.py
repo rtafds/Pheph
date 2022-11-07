@@ -229,3 +229,4 @@ class MakeDomain():
                     domain_list_append(dom)
             else:
                 domain_list_append(dom)
+        return domain_list
