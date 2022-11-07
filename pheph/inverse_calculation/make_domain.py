@@ -93,10 +93,10 @@ class MakeDomain():
         
     def make_domain_auto(self, data, exp, dummies_list='self', category_colnames='self', extrapolation=0.1):
         """A function that automatically acquires the domain.
-        If there is no self.dummies_list and self.category_colnames, it is treated as not.
-        If dummy variables and categorical variables are preprocessed and registered in the class, the information is used.
-        Go to create random.uniform with maximum and minimum values for undefined places. At that time, an extrapolated area multiplied by extrapolation is defined as a definition area.
-        Example: When the minimum value is 20 and the maximum value is 120, extrapolation = 0.1 extrapolates 100 * 0.1 minutes, and 10 ~ 130 is the domain.
+        If there is no self.dummies_list and self.category_colnames, it is treated as not.
+        If dummy variables and categorical variables are preprocessed and registered in the class, the information is used.
+        Go to create random.uniform with maximum and minimum values for undefined places. At that time, an extrapolated area multiplied by extrapolation is defined as a definition area.
+        Example: When the minimum value is 20 and the maximum value is 120, extrapolation = 0.1 extrapolates 100 * 0.1 minutes, and 10 ~ 130 is the domain.
         data : (pandas) data after pretreatment
         exp : (list) List of column numbers for experimental conditions
         Dependence ::: Depends on dummies_list and category_colnames created by preprocessing. If not, treat it as missing.
@@ -167,6 +167,8 @@ class MakeDomain():
              15: ('uniform', (0.0, 0.0625)) }
              (15 is the complement from the domain) (3 is batted with the categorical variable, so the categorical variable has priority)
              In this way, categorical variable + dummy variable + shift to create the original + completion, and complete the domain.
+        choice is random choice in 1d tuple
+        choice2 is random choice in 2d tuple
         """
         data = pd.DataFrame(data)
         # If dummies_list is not defined
