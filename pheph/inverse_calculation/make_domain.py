@@ -209,6 +209,23 @@ class MakeDomain():
         domain = dict(sorted(domain.items(), key=lambda x:x[0]))
 
         domain = self._domain_not_defined_part(domain, data, exp, x, categories_col, domains_col, extrapolation=extrapolation)
-
+        
         return domain
     
+
+    def domain_dict_to_list(self,domain):
+        domain = dict(sorted(domain.items(), key=lambda x:x[0]))
+        
+        #self.obj_domain = self.meke_domain(data, obj)
+        
+        # Make a list with only the index of choice2 in the domain.
+        # using in _mut_domain
+        domain_ = list(domain.values())
+        domain_list = []
+        domain_list_append = domain_list.append
+        for i, dom in enumerate(domain_):  
+            if domain_[i][0]=='choice2':
+                if isinstance(domain_[i][1], tuple) or isinstance(domain_[i][1],list):
+                    domain_list_append(dom)
+            else:
+                domain_list_append(dom)
