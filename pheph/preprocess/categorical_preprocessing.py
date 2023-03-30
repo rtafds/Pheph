@@ -7,13 +7,14 @@ from sklearn.preprocessing import LabelEncoder
 
 class CategoricalPreprocessing():
     
-    def formatting(self, data, dummies=[], categories=[], category_order=[]):
+    def formatting(self, data, dummies=[], category_le_list=[], category_assign_dict={}):
         """
         data (numpy or DataFrame): Input data.
-        categories (list[str or int] or None): Enter the column name or column number for categorical variable of nominal scale. Example : categories = ['carrier','substrate']
-        category_order (dict or None): Enter the column name or column number for the categorical variable of the order scale.
-        When specifying, {"column name": {"label": order}}。Example : category_order={'Sex':{'Male':0,'Female':1}}
-        Make sure categories and category_order are not on the same column.
+        category_le_list (list[str or int] or None): Enter the column name or column number for categorical variable of nominal scale. Example : category_le_list = ['carrier','substrate']
+        category_assign_dict (dict or None): Enter the column name or column number for the categorical variable of the order scale.
+          When specifying, {"column name": {"label": order}}。Example : category_assign_dict={'Sex':{'Male':0,'Female':1}}。
+          Other Example : category_assign_dict = {2:{"0回":0,"1-2回":1,"3-5回":2,"6回以上":3,np.nan:4}}
+          Make sure category_le_list and category_assign_dict are not on the same column.
         dummies (list or None): Specify the column name or column number to be a dummy variable. Example : dummies=['material','carrier','substrate']
         The value converted by dummies comes to the front of the line.
         
@@ -22,10 +23,10 @@ class CategoricalPreprocessing():
         self.dummies_list : A list of the column numbers that get_dummies and what changed. [[Original column number, column name, [what changed]], ...]
         Example [[9, 'Race', ['White', 'Black']], [10, 'Sex', ['Male', 'Female']]]
         self.categories_reborn : Information necessary to restore the categorized variable.
-        [[[Column name changed by category or column number], LabelEncorder defaultdict used for conversion], {category_order dictionary}]        例 [[[1, 2],defaultdict(sklearn.preprocessing.label.LabelEncoder,
+        [[[Column name changed by category or column number], LabelEncorder defaultdict used for conversion], {category_assign_dict dictionary}]        例 [[[1, 2],defaultdict(sklearn.preprocessing.label.LabelEncoder,
               {'Education': LabelEncoder(), 'Martial_Status': LabelEncoder()})],
               {'Sex': {'Male': 0, 'Female': 1}}]
-        self.categories : Column names of all columns that are categorized.
+        self.category_colnames : Column names of all columns that are categorized.
         
         dummies_list or categories_reborn is using in inverse_formatting
         dummies_list or category_colnames is using in make domain in GeneticAlgorithm
@@ -33,25 +34,25 @@ class CategoricalPreprocessing():
         
         data = pd.DataFrame(data).copy()  # Convert to DataFrame for when input data is numpy
         
-        # Convert according to categories
+        # Convert according to category_le_list
         le = LabelEncoder()
-        if not(categories==None or categories==[] or categories==False):  # Whether to convert the nominal scale into categorical variables
-            if all([type(x) == str for x in categories]):  # When category is column name
+        if not(category_le_list==None or category_le_list==[] or category_le_list==False):  # Whether to convert the nominal scale into categorical variables
+            if all([type(x) == str for x in category_le_list]):  # When category is column name
                 le = defaultdict(LabelEncoder)
-                data.loc[:,categories] = data.loc[:,categories].apply(lambda x: le[x.name].fit_transform(x))
+                data.loc[:,category_le_list] = data.loc[:,category_le_list].apply(lambda x: le[x.name].fit_transform(x))
                 # Inverse the encoded
-                #data.loc[:,categories].apply(lambda x: le[x.name].inverse_transform(x))
-            elif all([type(x) == int for x in categories]):  # Whei category is column number
+                #data.loc[:,category_le_list].apply(lambda x: le[x.name].inverse_transform(x))
+            elif all([type(x) == int for x in category_le_list]):  # Whei category is column number
                 le = defaultdict(LabelEncoder)
-                data.iloc[:,categories] = data.iloc[:,categories].apply(lambda x: le[x.name].fit_transform(x))
-            categories_reborn1 = [categories, le]  # List to undo
+                data.iloc[:,category_le_list] = data.iloc[:,category_le_list].apply(lambda x: le[x.name].fit_transform(x))
+            categories_reborn1 = [category_le_list, le]  # List to undo
         else:
-            categories = []
+            category_le_list = []
             categories_reborn1 = None
 
         category_column_list = []  # Save column name to categorize order scale
-        if not (category_order==None or category_order==[] or category_order==False):  # Whether to categorize ordinal scale
-            for column_name, value in category_order.items():  # Expand the input value dictionary into column names and order
+        if not (category_assign_dict==None or category_assign_dict=={} or category_assign_dict==False):  # Whether to categorize ordinal scale
+            for column_name, value in category_assign_dict.items():  # Expand the input value dictionary into column names and order
                 size_mapping = value
                 if type(column_name)==str:
                     data.loc[:, column_name] = data.loc[:, column_name].map(size_mapping)
@@ -62,8 +63,8 @@ class CategoricalPreprocessing():
                     data.iloc[:, column_name] = data.iloc[:, column_name].map(size_mapping)
                 category_column_list.append(column_name)
 
-        categories_ = categories +  category_column_list  # Save all converted column names in categories
-        self.categories_reborn = [categories_reborn1, category_order]  # Save all information to return to categories_reborn
+        categories_ = category_le_list +  category_column_list  # Save all converted column names in category_le_list
+        self.categories_reborn = [categories_reborn1, category_assign_dict]  # Save all information to return to categories_reborn
         
         if not(dummies==None or dummies==[] or dummies==False):  # When creating a dummy variable
             if all([type(x) == float for x in dummies]):
@@ -106,7 +107,7 @@ class CategoricalPreprocessing():
         category_colnames = []
         for category in categories_:
             if isinstance(category, int):
-                column = list(data_copy.iloc[:,[category]].columns)[0]
+                column = list(data.iloc[:,[category]].columns)[0]
                 category_colnames.append(column)
             elif isinstance(category, str):
                 category_colnames.append(category)
@@ -159,6 +160,7 @@ class CategoricalPreprocessing():
             categories_reborn = [None, None]
 
         reborn_data = data.copy()
+        columns_list = reborn_data.columns  # use column names for convert dtype is int
 
         # Restoration when dummy variables are used
         if not(dummies_list==[] or dummies_list==None or dummies_list==False):
@@ -173,7 +175,7 @@ class CategoricalPreprocessing():
                 reborn_data.drop(dummies_columns, axis=1, inplace=True)
                 reborn_data = self._pd_insert(reborn_data, reborn, insert_colnum, axis=1)
 
-        # Restoration of categorical variables converted with categories' LabelEncorder
+        # Restoration of categorical variables converted with category_le_list' LabelEncorder
         categories_reborn_le = categories_reborn[0]
         if not (categories_reborn_le==None or categories_reborn_le==[] \
                 or categories_reborn_le==False):
@@ -182,16 +184,20 @@ class CategoricalPreprocessing():
 
             if all([type(x) == int for x in columns]):
                 # Inverse the encoded
-                reborn_data.iloc[:, columns] = reborn_data.iloc[:, columns].astype(int)
+        
+                # convert dtype is int
+                # For some reason the fllowing dosen't work reborn_data.iloc[:, columns] = reborn_data.iloc[:, columns].astype(int)
+                columns_name = list(columns_list[columns])
+                reborn_data[columns_name] = reborn_data[columns_name].astype("int64")
                 reborn_data.iloc[:, columns] = reborn_data.iloc[:, columns].apply(lambda x: le[x.name].inverse_transform(x))
             elif all([type(x) == str for x in columns]):
                 # Inverse the encoded
-                reborn_data.loc[:, columns] = reborn_data.loc[:, columns].astype(int)
+                reborn_data[columns] = reborn_data[columns].astype("int64")
                 reborn_data.loc[:, columns] = reborn_data.loc[:, columns].apply(lambda x: le[x.name].inverse_transform(x))
             else:
                 raise ValueError("Use same type or correct type")
 
-        # Restoration of categorical variables converted by category_order dictionary
+        # Restoration of categorical variables converted by category_assign_dict dictionary
         categories_reborn_dict = categories_reborn[1]
         if not(categories_reborn_dict==None or categories_reborn_dict==[] \
                 or categories_reborn_dict==False):
@@ -203,18 +209,20 @@ class CategoricalPreprocessing():
                 reborn_dict_swap.update(d_swap_)
 
             # Convert as you would when converting
-            for column_name, value in reborn_dict_swap.items():  # Expand the input value dictionary into column names and order
+            for column, value in reborn_dict_swap.items():  # Expand the input value dictionary into column names and order
                 size_mapping = value
-                if type(column_name) == str:
-                    reborn_data.loc[:, column_name] = reborn_data.loc[:, column_name].astype(int)
-                    reborn_data.loc[:, column_name] = reborn_data.loc[:, column_name].map(size_mapping)
-                elif type(column_name) == int:
-                    reborn_data.iloc[:, column_name] = reborn_data.iloc[:, column_name].astype(int)
-                    reborn_data.iloc[:, column_name] = reborn_data.iloc[:, column_name].map(size_mapping)
-                elif type(column_name) == float:
-                    column_name = int(column_name)
-                    reborn_data.iloc[:, column_name] = reborn_data.iloc[:, column_name].astype(int)
-                    reborn_data.iloc[:, column_name] = reborn_data.iloc[:, column_name].map(size_mapping)
+                if type(column) == str:
+                    reborn_data[:, column] = reborn_data[:, column].astype("int64")
+                    reborn_data.loc[:, column] = reborn_data.loc[:, column].map(size_mapping)
+                elif type(column) == int:
+                    column_name = [columns_list[column]]
+                    reborn_data[column_name] = reborn_data[column_name].astype("int64")
+                    reborn_data.iloc[:, column] = reborn_data.iloc[:, column].map(size_mapping)
+                elif type(column) == float:
+                    column = int(column)
+                    column_name = [columns_list[column]]
+                    reborn_data[column_name] = reborn_data[column_name].astype("int64")
+                    reborn_data.iloc[:, column] = reborn_data.iloc[:, column].map(size_mapping)
 
         return reborn_data
     

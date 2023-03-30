@@ -61,7 +61,7 @@ def find_packages(where='.', exclude=()):
 
 def do_setup():
     setup(name=NAME,
-          #description=DESCRIPTION,
+          description=DESCRIPTION,
           long_description=LONG_DESCRIPTION,
           classifiers=CLASSIFIERS,
           author=AUTHOR,
